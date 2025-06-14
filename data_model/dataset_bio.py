@@ -318,7 +318,7 @@ class LimbDataset(DigitsDataset):
 
 
 class LHCODataset(DigitsDataset):
-    def load_data(self, data_path, train=True):
+    def load_data(self, data_path, train=True, filter=True):
         adata = sc.read("/any/data/difftreedata/datasets_bio/processed/LHCO.h5ad")
         if filter:
             # sc.pp.subsample(adata, fraction=0.1)
